@@ -1,0 +1,71 @@
+/**
+ * Plugin CSS Style 
+ */
+.pts_title_wrapper.lower_third {
+    position: absolute;
+    width: 100%;
+    height: auto;
+}
+
+.pts_title {
+	margin-bottom: 0 !important; 
+	padding: 10px !important; 
+}
+
+.pts_title_wrapper.pts_top {
+	top: 0;
+	left: 0; 
+}
+
+.pts_title_wrapper.pts_center {
+	top: 50%;
+	left: 0; 
+}
+
+.pts_title_wrapper.pts_bottom {
+	bottom: 0;
+	left: 0; 
+}
+
+/**
+ * Navigation 
+ */
+.pts_container.carousel_nav_enable {
+    padding-top: 40px;
+}
+
+.pts_nav_top_right {
+    top: 0;
+    right: 0;
+}
+.pts_nav_container {
+    position: absolute;
+    z-index: 999;
+    display: flex;
+}
+
+.pts-nav {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 32px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.pts-prev.pts-nav {
+    margin-right: 5px;
+}
+
+.pts-nav i {
+	transition: 0.1s;
+	font-size: 18px;
+}
+
+/**
+ * Pagination 
+ */
+
+.pts_container.carousel_pagination_enable {
+    padding-bottom: 40px;
+}
