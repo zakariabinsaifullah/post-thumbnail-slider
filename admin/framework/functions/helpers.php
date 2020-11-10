@@ -39,15 +39,13 @@ if ( ! function_exists( 'csf_array_search' ) ) {
 if ( ! function_exists( 'csf_get_var' ) ) {
   function csf_get_var( $var, $default = '' ) {
 
-    $csf_post_data = isset( $_POST[$var] ) ? $_POST[$var] : '';
-
-    if( $csf_post_data ) {
+    $csf_post_data = absint( $_POST[$var] );
+    if( isset( $csf_post_data ) ) {
       return $csf_post_data;
     }
 
-    $csf_get_data = isset( $_GET[$var] ) ? $_GET[$var] : '';
-
-    if(  $csf_get_data ) {
+    $csf_get_data = absint( $_GET[$var] );
+    if(  isset( $csf_get_data ) ) {
       return $csf_get_data;
     }
 
@@ -67,15 +65,13 @@ if ( ! function_exists( 'csf_get_var' ) ) {
 if ( ! function_exists( 'csf_get_vars' ) ) {
   function csf_get_vars( $var, $depth, $default = '' ) {
 
-    $csf_post_datas = isset( $_POST[$var][$depth] ) ? $_POST[$var][$depth] : '';
-    
-    if( $csf_post_datas ) {
+    $csf_post_datas = absint( $_POST[$var][$depth] );
+    if( isset( $csf_post_datas ) ) {
       return $csf_post_datas;
     }
 
-    $csf_get_datas = isset( $_GET[$var][$depth] ) ? $_GET[$var][$depth] : '';
-
-    if( $csf_get_datas ) {
+    $csf_get_datas = absint( $_GET[$var][$depth] );
+    if( isset( $csf_get_datas ) ) {
       return $csf_get_datas;
     }
 

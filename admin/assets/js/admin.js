@@ -74,6 +74,14 @@
 	pts_display_mode[1].classList.add('pts_btn_pro');
 
 	/**
+	 * Pro Post Type 
+	 */
+	
+	let pts_pro_post_type = document.querySelectorAll('.pro_select_pt .csf--button');
+
+	pts_pro_post_type[1].classList.add('pts_btn_pro');
+
+	/**
 	 * Pro Feature
 	 */
 	

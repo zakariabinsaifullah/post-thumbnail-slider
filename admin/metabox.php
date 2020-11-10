@@ -112,6 +112,20 @@ if( class_exists( 'CSF' ) ) {
 				'icon'   => 'fa fa-filter',
 				'fields' => array(
 
+					// carousel mode
+			        array(
+						'id'       => 'pts_post_type',
+						'type'     => 'button_set',
+						'title'    => __( 'Post Type', 'post-thumbnail-slider' ),
+						'subtitle' => __( 'select post type e.g Post/Product', 'post-thumbnail-slider' ),
+						'default'  => 'post',
+						'class'    => 'pro_select_pt',
+						'options'  => array(
+							'post' => __( 'Post', 'post-thumbnail-slider' ),
+							'product'   => __( 'Product (Pro)', 'post-thumbnail-slider' ),
+				        )
+			        ),
+
 					// Post Filter Type
 			        array(
 						'id'       => 'pts_filter_type',
@@ -340,7 +354,7 @@ if( class_exists( 'CSF' ) ) {
 							'pts_nav_bottom_center' => __( 'Bottom Center (Pro)', 'post-thumbnail-slider' ),
 							'pts_nav_center_center' => __( 'Center Center (Pro)', 'post-thumbnail-slider' ),
 						),
-						'default'    => 'top_right',
+						'default'    => 'pts_nav_top_right',
 						'class'      => 'pro_select',
 						'dependency' => array( 'pts_carousel_mode|pts_carousel_nav', '==|==', 'carousel|true' )
 					),
@@ -539,7 +553,7 @@ if( class_exists( 'CSF' ) ) {
 						'title'    => __( 'Title Typography', 'post-thumbnail-slider' ),
 						'subtitle' => __( 'set title typography', 'post-thumbnail-slider' ),
 						'default'  => array(
-							'color'          => '#ffffff',
+							'color'          => '#d6d6d6',
 							'font-family'    => 'Roboto',
 							'font-style'     => 'normal',
 							'font-wight'     => 400,
